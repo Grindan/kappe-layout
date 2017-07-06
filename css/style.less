@@ -17,14 +17,18 @@ html, body {
     position: relative;
 }
 
+.absolute_fullheight {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+}
+
 .left-section {
+    .absolute_fullheight;
     z-index: 2;
     width: 300px;
     background: #242b2e;
     box-shadow: 0 0 40px 40px rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
     text-align: right;
     
     &__logo {
@@ -34,9 +38,7 @@ html, body {
         position: relative;
 
         img {
-            position: absolute;
-            top: 0;
-            bottom: 0;
+            .absolute_fullheight;
             left: 0;
             right: 0;
             margin: auto;
@@ -94,7 +96,36 @@ html, body {
             } 
         }
     }
+
+    &__social {
+        padding-right: 24px;
+        text-align: right;
+        margin-top: 25px;
+        font-size: 21pt;
+
+        &__flickr { color: white; }
+        &__googleplus { color: #dc6230; }
+        &__twitter { color: #45c9ed; }
+        &__pinterest { color: #f73c2d; }
+        &__dribbble { color: #ff7ac7; }
+        &__behance { color: #46caed; }
+        &__facebook { color: #3b599d;}
+
+        & a:hover {
+            color: #1ab5b3;
+        }
+    }
+
+    &__copyright {
+        font-family: 'Roboto', sans-serif;
+        font-size: 8.5pt;
+        color: #6b7072;
+        padding-right: 24px;
+        text-align: right;
+        padding-top: 15px;
+    }
 }
+
 
 .portfolio {
     z-index: 1;
@@ -151,9 +182,8 @@ html, body {
 }
 
 .info {
+    .absolute_fullheight;    
     z-index: 3;
-    position: absolute;
-    top: 0;                             /*nothing will be happen if botton:o added*/
     margin-left: 1637px;
 
     &__label {
@@ -175,26 +205,44 @@ html, body {
         transition-timing-function: ease-out;
 
         p {
-            background: none;
+            font-size: 0pt;
+            padding: 8px;
+            transition: font-size 0.4s ease-out;
+
+            &:first-child {
+                padding-top: 18px; 
+            }
+
+            e {
+                padding: 0px 9px;
+                font-size: 0pt;
+                transition: font-size 0.4s ease-out;                           
+            }
         }
     }
 
     &__label:hover + &__contact, &__contact:hover {
         width: 283px;
         height: 130px;
-        font-size: 10px;
         color: white;
         margin-left: 0;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.7);
+        p { font-size: 12pt; }
+        e { font-size: 15px; }
     }
 }
 
 .active-element {
-    background: #2cb7b5;
+    background: linear-gradient(to top, #18a4a2, #31bcba);    
     border-bottom: 1px solid #169291;
     border-top-color: #169291;
 }
 
 .active-element + .left-section > .menu__element {
     border-top: none;
+}
+
+
+.iconic {
+    font-family: iconic;
 }
