@@ -24,7 +24,7 @@ body {
   top: 0px;
   bottom: 0px;
   z-index: 2;
-  width: 300px;
+  width: 15.625%;
   background: #242b2e;
   box-shadow: 0 0 40px 40px rgba(0, 0, 0, 0.5);
   text-align: right;
@@ -45,8 +45,6 @@ body {
 }
 .left-section__menu {
   color: white;
-  width: 100%;
-  /*?????????????????????*/
 }
 .left-section__menu__element {
   font-size: 13.5pt;
@@ -127,17 +125,17 @@ body {
 }
 .portfolio {
   z-index: 1;
-  width: 1620px;
+  width: 84.375%;
   /*create mixin*/
-  margin-left: 300px;
+  margin-left: 15.625%;
   /*create mixin*/
   background-color: white;
   font-size: 0px;
 }
 .portfolio__example {
   display: inline-block;
-  width: 405px;
-  height: 311px;
+  width: 25%;
+  height: 19.2%;
   color: white;
 }
 .portfolio__example__info {
@@ -151,6 +149,10 @@ body {
 }
 .portfolio__example:hover .portfolio__example__info {
   opacity: 0.9;
+}
+.portfolio__example img {
+  height: 100%;
+  width: 100%;
 }
 .portfolio .design-name {
   padding-top: 80px;
@@ -175,11 +177,11 @@ body {
   width: 107px;
 }
 .info {
-  position: absolute;
   top: 0px;
   bottom: 0px;
   z-index: 3;
-  margin-left: 1637px;
+  position: absolute;
+  right: 0;
 }
 .info__label {
   width: 91px;

@@ -26,7 +26,7 @@ html, body {
 .left-section {
     .absolute_fullheight;
     z-index: 2;
-    width: 300px;
+    width: 15.625%;
     background: #242b2e;
     box-shadow: 0 0 40px 40px rgba(0, 0, 0, 0.5);
     text-align: right;
@@ -47,7 +47,6 @@ html, body {
 
     &__menu {
         color: white;
-        width: 100%;                    /*?????????????????????*/
         
         &__element {
             font-size: 13.5pt;
@@ -129,15 +128,16 @@ html, body {
 
 .portfolio {
     z-index: 1;
-    width: 1620px;                          /*create mixin*/
-    margin-left: 300px;                  /*create mixin*/
+    width: 84.375%;                          /*create mixin*/
+    margin-left: 15.625%;                  /*create mixin*/
     background-color: white;
     font-size: 0px;
 
     &__example {
         display: inline-block;
-        width: 405px;
-        height: 311px;
+        width: 25%;
+        height: 19.2%;
+        // height: 311px;
         color: white;
 
         &__info {
@@ -152,6 +152,11 @@ html, body {
 
         &:hover &__info {
             opacity: 0.9;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
         }
     }
 
@@ -184,7 +189,8 @@ html, body {
 .info {
     .absolute_fullheight;    
     z-index: 3;
-    margin-left: 1637px;
+    position: absolute;
+    right: 0;
 
     &__label {
         width: 91px;
