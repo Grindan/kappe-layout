@@ -1,0 +1,54 @@
+@import url('base.less');
+
+.info {
+    .absolute_fullheight;
+    z-index: 3;
+    position: absolute;
+    right: 0;
+
+    &__label {
+        width: 91px;
+        height: 91px;
+        margin-left: 192px;
+        background-image: url("../images/kappe-info.png");
+        background-color: #2db8b7;
+    }
+
+    &__contact {
+        width: 91px;
+        height: 0px;
+        margin-left: 192px;
+        font-size: 0px;
+        color: transparent;
+        transition-property: width, height, font-size, margin-left;
+        transition-duration: 0.4s;
+        transition-timing-function: ease-out;
+
+        p {
+            font-size: 0pt;
+            padding: 8px;
+            transition: font-size 0.4s ease-out;
+            cursor: pointer;
+
+            &:first-child {
+                padding-top: 18px; 
+            }
+
+            e {
+                padding: 0px 9px;
+                font-size: 0pt;
+                transition: font-size 0.4s ease-out;
+            }
+        }
+    }
+
+    &__label:hover + &__contact, &__contact:hover {
+        width: 283px;
+        height: 130px;
+        color: white;
+        margin-left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        p { font-size: 12pt; }
+        e { font-size: 15px; }
+    }
+}
