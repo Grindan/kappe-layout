@@ -128,41 +128,41 @@ html, body {
 
 .portfolio {
     z-index: 1;
-    width: 84.375%;                          /*create mixin*/
-    margin-left: 15.625%;                  /*create mixin*/
+    width: 84.375%;
+    margin-left: 15.625%;
     background-color: white;
     font-size: 0px;
 
     &__example {
         display: inline-block;
         width: 25%;
-        height: 19.2%;
-        // height: 311px;
         color: white;
 
+        img {
+            width: 100%;
+        }
+
         &__info {
-            margin-top: -311px;
-            height: 311px;
+            margin-top: -77%;
             background: #1ab5b3;
             opacity: 0;
             position: relative;
             text-align: center;
             transition: opacity 0.5s ease-out;
+
+            img {
+                width: 30% !important;;
+            }
         }
 
         &:hover &__info {
             opacity: 0.9;
         }
-
-        img {
-            height: 100%;
-            width: 100%;
-        }
     }
 
     .design-name {
-        padding-top: 80px;
-        font-size: 24pt;
+        padding-top: 26%;
+        font-size: 2vw;
         color: white;
         transition-property: color;
         transition-duration: 0.4s;
@@ -170,8 +170,7 @@ html, body {
     }
 
     .design-tags {
-        padding-top: 7px;
-        font-size: 12pt;
+        font-size: 1vw;
         color: white;
         transition-property: color;
         transition-duration: 0.4s;
@@ -180,10 +179,10 @@ html, body {
 }
 
 .line {
-    margin: 17px 149px 0 149px;
+    margin: 3% 0 0 33%;
     height: 1px;
     background-color: white;
-    width: 107px;
+    width: 33%;
 }
 
 .info {
