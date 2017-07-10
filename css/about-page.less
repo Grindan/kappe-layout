@@ -1,0 +1,162 @@
+@import url('left-section.less');
+@import url('info.less');
+
+@color-turquoise: #2db8b7;
+@color-lite-gray: #e2e2e2;
+
+.font-editor(@size, @weight: 300) {
+    opacity: 1;
+    font-weight: @weight;
+    font-size: @size;
+    line-height: @size;
+}
+
+.team {
+    z-index: 1;
+    width: 79.2%;
+    margin: 25px;
+    margin-left: 16.8%;
+    padding: 30px 0;
+    background-color: white;
+    font-size: 0px;
+
+    h2 {
+        font-size: 18pt;
+        font-weight: 300;
+    }
+
+    p {
+        font-size: 14pt;
+        opacity: 0.5;
+        line-height: 30px;
+    }
+
+    &__info-panel {
+        display: inline-block;
+        width: 45%;
+        padding: 0 30px;
+
+        &:first-child {
+            border-right: 1px solid @color-lite-gray;
+        }
+
+        &:last-child {
+            position: absolute;
+            width: 37%;
+        }
+
+        .team-photo {
+            width: 100%;
+        }
+
+        .line {
+            height: 1px;
+            width: 100%;
+            background: @color-lite-gray;
+            margin-top: 25px;
+        }
+
+        &__staff-person {
+            display: inline-block;
+            margin: 0 20px 20px 0;
+            height: 180px;
+            width: 227px;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+
+            &__info {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                background: @color-turquoise;
+                margin-top: -180px;
+                opacity: 0;
+                transition: opacity .5s ease-out;
+                color: white;
+                text-align: center;
+
+                &__name {
+                    .font-editor(13pt, 500) !important;
+                    padding-top: 32%;
+                    text-transform: uppercase;
+                }
+
+                &__job {
+                    .font-editor(10pt, 100) !important;
+                }
+            }
+
+            &:hover &__info {
+                opacity: 0.8;
+                background: @color-turquoise;
+            }
+        }
+
+        &__skill {
+            
+            &__name {}
+
+            &__percent {
+                float: right;
+                margin-top: -30px;
+            }
+
+            &__container {
+                width: 100%;
+                height: 35px;
+                border: 1px solid @color-lite-gray;
+
+                &__element {
+                    height: 100%;
+                    background: @color-lite-gray;
+                }
+
+                .design { width: 89%; }
+                .development { width: 97%; }
+                .plugins { width: 85%; }
+                .front-end { width: 75%; }
+            }
+        }
+
+        &__testimonials {
+            border: 1px solid @color-lite-gray;
+
+            &__title {
+                width: 100%;
+                height: 80px;
+                background: @color-turquoise;
+
+                img {
+                    width: 80px;
+                    position: absolute;
+                }
+
+                p {
+                    .font-editor(12pt);
+                    color: white;
+                    font-style: italic;
+                    margin-left: 90px;
+                    padding-top: 30px;
+                }
+            }
+
+            &__comment {
+                padding: 25px 30px;
+            }
+        }
+
+        &__services {
+            .font-editor(12pt);
+            list-style: none;
+            color: #848484;
+
+            li:before {
+                content: "•";
+            }
+        }
+    }
+}
+
