@@ -4,16 +4,13 @@
 @color-turquoise: #1ab5b3;
 @color-lite-gray: #e5e5e5;
 
-.left-section {
-    box-shadow: none;
-}
-
 .project {
     z-index: 1;
     width: 79.2%;
     margin-left: 16.8%;
     position: absolute;
     margin-top: 25px;
+    margin-bottom: 25px;
     padding: 30px;
     background-color: white;
     font-size: 0px;
@@ -61,7 +58,7 @@
         h2 {
             font-size: 18pt;
             margin-top: 33px;
-            font-weight: 100;
+            font-weight: 300;
         }
 
         p {
@@ -127,6 +124,11 @@
             font-weight: 300;
             color: #a3a3a3;
             cursor: pointer;
+
+            &:hover {
+                color: @color-turquoise;
+                border-color: @color-turquoise;
+            }
         }
 
         .project-h { margin-top: 30px !important; }
@@ -138,6 +140,7 @@
             height: 78px;
             width: 78px;
             margin: 0 12px 12px 0;
+            cursor: pointer;
         }
 
         &__features {
