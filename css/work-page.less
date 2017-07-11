@@ -28,33 +28,7 @@
             margin-top: -35px;
             width: 38%;
         }
-
-        // &__slider {
-        //     img {
-        //         width: 100%;
-        //     }
-
-        //     &__panel {
-        //         margin-top: -30px;
-        //         margin-left: 80%;
-
-        //         &__element {
-        //             display: inline-block;
-        //             width: 19px;
-        //             height: 11px;
-        //             margin-left: 8px;
-        //             background: #b6b6b6;
-        //             border: 1px solid #e1e1e1;
-        //             cursor: pointer;
-        //         }
-
-        //         .active-photo {
-        //             background: #40bcba;
-        //             border-color: #6b6b6b;
-        //         }
-        //     }
-        // }
-
+        
         h2 {
             font-size: 18pt;
             margin-top: 33px;
@@ -160,6 +134,31 @@
                 content: "\e805";
                 font-family: iconic;
                 margin-right: 9px;
+            }
+        }
+    }
+}
+
+@media screen and (max-device-width: 900px) {
+    .page-wrapper {
+        background: white;
+        padding: 0;
+    }
+    .left-section {
+        width: 112%;
+    }
+    .project {
+        position: absolute;
+        width: 100%;
+        margin: 25px;
+        &__info-panel {
+            display: block;
+            width: 100%;
+
+            &:last-child {
+                position: inherit;
+                width: 95%;
+                margin-top: 20px;
             }
         }
     }

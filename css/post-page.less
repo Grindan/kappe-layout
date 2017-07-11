@@ -269,8 +269,11 @@
                 display: inline-block;
                 font-size: 11pt !important;
                 opacity: 1 !important;
-                e {
-                    opacity: 0.4;
+                cursor: pointer;
+                e { opacity: 0.4; }
+                &:hover{
+                    color:@color-turquoise;
+                    e { color:black; }
                 }
             }
         }
@@ -284,3 +287,19 @@
 .two-answer { margin-left: 180px; }
 .three-answer { margin-left: 270px; }
 .after-comments { margin-top: 50px !important; }
+
+@media screen and (max-device-width: 900px) {
+    .post {
+        width: 75.2%;
+        &__info-panel {
+            display: block;
+            width: 100%;
+
+            &:last-child {
+                position: inherit;
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+    }
+}
