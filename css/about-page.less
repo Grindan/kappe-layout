@@ -22,7 +22,8 @@
 
     h2 {
         font-size: 18pt;
-        font-weight: 300;
+        font-weight: 100;
+        margin: 26px 0 10px 0;
     }
 
     p {
@@ -34,7 +35,7 @@
     &__info-panel {
         display: inline-block;
         width: 45%;
-        padding: 0 30px;
+        padding: 0 1%;
 
         &:first-child {
             border-right: 1px solid @color-lite-gray;
@@ -61,6 +62,7 @@
             margin: 0 20px 20px 0;
             height: 180px;
             width: 227px;
+            cursor: pointer;
 
             img {
                 height: 100%;
@@ -94,14 +96,19 @@
                 background: @color-turquoise;
             }
         }
-
+        .skills-h { margin-top: 0; }
         &__skill {
-            
-            &__name {}
+            margin-top: 15px;
+            &__name {
+                margin-top: 10px;
+                font-size: 12pt !important;
+            }
 
             &__percent {
                 float: right;
                 margin-top: -30px;
+                font-size: 12pt !important;
+                opacity: 1 !important;
             }
 
             &__container {
@@ -138,7 +145,7 @@
                     .font-editor(12pt);
                     color: white;
                     font-style: italic;
-                    margin-left: 90px;
+                    margin-left: 100px;
                     padding-top: 30px;
                 }
             }
@@ -149,26 +156,61 @@
         }
 
         &__services {
-            .font-editor(12pt);
+            .font-editor(13pt, 100);
             list-style: none;
             color: #848484;
-
+            li {
+                margin-top: 18px;
+                cursor: pointer;
+                &:hover { color: @color-turquoise; }
+            }
             li:before {
                 content: "•";
+                margin-right: 10px;
             }
         }
     }
 }
 
 @media screen and (max-device-width: 900px) {
+    .left-section { width: 120%; }
+    .page-wrapper { background: white; }
     .team {
-        width: 100%;
-        margin: 0;
+        width: 110%;
+        margin: 0 4%;
         &__info-panel {
             width: 100% !important;
-            &:last-child {
-                width: 97% !important;
+            &:first-child { border: none; }
+            &:last-child { width: 97% !important; }
+            h2 { font-size: 35pt !important; }
+            &__skill {
+                margin-bottom: 25x;
+                &__name { font-size: 22pt !important; }
+                &__percent { font-size: 22pt !important; }
+                &__container { height: 50px; margin-top: 10px; }
+            }
+            &__testimonials {
+                &__title  {
+                    height: 120px;
+                    img { width: 120px; }
+                    p { margin-left: 140px;}
+                }
+                p {
+                    font-size: 25pt;
+                    line-height: 35pt;
+                }
+            }
+
+            &__services {
+                margin-bottom: 20px;
+                li {
+                    font-size: 21pt;
+                    line-height: 25pt;
+                }
             }
         }
+        .skills-h { margin-top: 10px; }
+        
     }
+
 }

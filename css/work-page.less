@@ -4,6 +4,7 @@
 
 @color-turquoise: #1ab5b3;
 @color-lite-gray: #e5e5e5;
+@color-gray: #848484;
 
 .project {
     z-index: 1;
@@ -97,11 +98,12 @@
             padding: 11px 16px;
             margin-right: 12px;
             margin-top: 16px;
-            border: 1px solid #e5e5e5;
+            border: 1px solid @color-gray;
             border-radius: 11px;
             font-size: 10pt;
             font-weight: 300;
-            color: #a3a3a3;
+            color: @color-gray;
+            opacity: 0.7;
             cursor: pointer;
 
             &:hover {
@@ -128,7 +130,8 @@
             margin-left: -5px;
 
             li { 
-                margin-top: 12px; 
+                margin-top: 12px;
+                color: @color-gray;
             }
             li:before {
                 content: "\e805";
@@ -154,12 +157,23 @@
         &__info-panel {
             display: block;
             width: 100%;
-
+            &__features {
+                margin-bottom: 20px;
+            }
             &:last-child {
                 position: inherit;
                 width: 95%;
                 margin-top: 20px;
             }
+            p, &__tags div, &__features li { font-size: 20pt !important; }
+            &__features li { color: @color-gray; }
+            &__gallery img {
+                height: 120px;
+                width: 120px;
+             }
         }
     }
+    h2, .project-h, .tags-h, .gallery-h, .features-h { font-size: 25pt !important; }
+    .info-text { font-size: 18pt !important; }
+
 }

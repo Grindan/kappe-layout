@@ -290,16 +290,31 @@
 
 @media screen and (max-device-width: 900px) {
     .post {
-        width: 75.2%;
+        width: 100%;
+        margin: 0;
         &__info-panel {
             display: block;
             width: 100%;
-
+            p, &__tags div, &__features li { font-size: 20pt !important; }
             &:last-child {
                 position: inherit;
                 width: 100%;
                 margin-top: 20px;
             }
         }
+    }
+    .comment__info__content__name-time {
+        font-size: 18pt !important; 
+    }
+    .feedback-panel__column .contact-input {
+        font-size: 15pt !important;
+        width: 256px;
+    }
+    .feedback-panel__column__message textarea,
+    .feedback-panel__column__sent-button {
+        font-size: 15pt !important;
+    }
+    .circle p {
+        font-size: 12pt !important;
     }
 }
