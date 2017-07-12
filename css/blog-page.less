@@ -1,5 +1,6 @@
 @import url('left-section.less');
 @import url('info.less');
+@import url('slider-arrows.less');
 
 @color-turquoise: #1ab5b3;
 @color-lite-gray: #e5e5e5;
@@ -118,6 +119,7 @@
     &__photo-post {
         font-size: 0;
         position: relative;
+        cursor: pointer;
 
         &__info {
             text-align: center;
@@ -200,4 +202,9 @@
     font-size: 16pt;
     font-weight: 100;
     font-family: Roboto;
+    cursor: pointer;
+
+    &:hover {
+        background: @color-dark-gray;
+    }
 }

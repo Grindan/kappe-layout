@@ -1,0 +1,63 @@
+#slideshow {
+    position: relative;
+    width: 294px;
+    height: 265px;
+
+    .commands {
+        position: absolute;
+        top: 45%;
+        color: white;
+        background: @color-turquoise;
+        height: 23px;
+        width: 23px;
+        padding: 10px;
+        font-size: 16pt;
+        font-weight: 300;
+        text-align: center;
+        text-decoration: none;
+        z-index: 1;
+        &:hover { background: @color-dark-gray; }
+    }
+    .next { right: 0; }
+    .prev, #slideshow .next { display: none; }
+    .commands1 { display: block; }
+    .container {
+        position: relative;
+        width: 294px;
+        height: 230px;
+        overflow: hidden;
+    }
+    .slider {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 400%;
+        height: 265px;
+    }
+    .c_slider {
+        position: absolute;
+        left:0; top:0;
+        width: 400%;
+        height: 265px;
+        background: url('../images/gallery-post2-1.png') 0 0 no-repeat, 
+                    url('../images/gallery-post2-2.png') 294px 0 no-repeat, 
+                    url('../images/gallery-post2-3.png') 588px 0 no-repeat, 
+    }
+}
+
+.sl_i:target ~ #slideshow .c_slider {
+    -webkit-transition: background 1s;
+    -moz-transition: background 1s;
+    transition: background 1s;
+}
+
+.sl_i:target ~ #slideshow .slider { visibility: hidden }
+#sl_i1:target ~ #slideshow .commands { display: none; }
+#sl_i1:target ~ #slideshow .commands1 { display: block; }
+#sl_i1:target ~ #slideshow .c_slider { background-position: 0 0, 294px 0, 588px 0, 882px 0; }
+#sl_i2:target ~ #slideshow .commands { display: none; }
+#sl_i2:target ~ #slideshow .commands2 { display: block; }
+#sl_i2:target ~ #slideshow .c_slider { background-position: -294px 0, 0 0, 294px 0, 588px 0; }
+#sl_i3:target ~ #slideshow .commands { display: none; }
+#sl_i3:target ~ #slideshow .commands3 { display: block; }
+#sl_i3:target ~ #slideshow .c_slider { background-position: -588px 0, -294px 0, 0 0, 294px 0; }
